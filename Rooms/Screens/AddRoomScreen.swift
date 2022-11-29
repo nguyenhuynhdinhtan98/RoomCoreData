@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddRoomScreen: View {
-    
+    @StateObject private var addRoomVM = AddRoomViewModel()
     @Environment(\.presentationMode) var presentation
     
     @State private var name: String = ""
@@ -20,15 +20,16 @@ struct AddRoomScreen: View {
         NavigationView {
             VStack {
                 Form {
-                    TextField("Enter room", text: $name)
-                    TextField("Enter width", text: $width)
-                    TextField("Enter length", text: $length)
-                    ColorPicker("Select color", selection: $color)
+                    TextField("Enter room", text: $addRoomVM.name)
+                    TextField("Enter width", text: $addRoomVM.width)
+                    TextField("Enter length", text: $addRoomVM.length)
+                    ColorPicker("Select color", selection: $addRoomVM.color)
                     
                     HStack {
                         Spacer()
                         Button("Save") {
-                            
+                            addRoomVM.save()
+                            presentation.wrappedValue.dismiss()
                         }
                         Spacer()
                     }

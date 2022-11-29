@@ -10,7 +10,7 @@ import CoreData
 
 class CoreDataManager {
     static let shared = CoreDataManager()
-    private let nSPersistentContainer: NSPersistentContainer
+    let nSPersistentContainer: NSPersistentContainer
     
     private init() {
         self.nSPersistentContainer = NSPersistentContainer(name: "RoomModel")
@@ -21,7 +21,12 @@ class CoreDataManager {
         }
     }
     
-    public func save(room: Room) {
-        
+    public func save() {
+        do {
+            try self.nSPersistentContainer.viewContext.save()
+        }catch {
+            self.nSPersistentContainer.viewContext.rollback()
+            print("Save fail")
+        }
     }
 }
