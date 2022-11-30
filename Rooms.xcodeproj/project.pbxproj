@@ -17,6 +17,8 @@
 		C2881E1A2934C8F900D03A8B /* Room+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2881E192934C8F900D03A8B /* Room+CoreDataClass.swift */; };
 		C2881E1C2934DA7200D03A8B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2881E1B2934DA7200D03A8B /* CoreDataManager.swift */; };
 		C2881E1E2934E02500D03A8B /* AddRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2881E1D2934E02500D03A8B /* AddRoomViewModel.swift */; };
+		C2BB5CFD2936F13A00946B7F /* UIColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BB5CFC2936F13A00946B7F /* UIColorTransformer.swift */; };
+		C2BB5CFF2936F4DC00946B7F /* RoomListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BB5CFE2936F4DC00946B7F /* RoomListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		C2881E192934C8F900D03A8B /* Room+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Room+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C2881E1B2934DA7200D03A8B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		C2881E1D2934E02500D03A8B /* AddRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoomViewModel.swift; sourceTree = "<group>"; };
+		C2BB5CFC2936F13A00946B7F /* UIColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTransformer.swift; sourceTree = "<group>"; };
+		C2BB5CFE2936F4DC00946B7F /* RoomListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				C2881E1D2934E02500D03A8B /* AddRoomViewModel.swift */,
+				C2BB5CFE2936F4DC00946B7F /* RoomListViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 		8DCCEC2925EAFD7500F0B0F3 /* Transformers */ = {
 			isa = PBXGroup;
 			children = (
+				C2BB5CFC2936F13A00946B7F /* UIColorTransformer.swift */,
 			);
 			path = Transformers;
 			sourceTree = "<group>";
@@ -199,9 +205,11 @@
 				C2881E162934C7E600D03A8B /* RoomModel.xcdatamodeld in Sources */,
 				8DCCEC2525EAA94400F0B0F3 /* RoomListScreen.swift in Sources */,
 				8DCCEC2125EAA93500F0B0F3 /* AddRoomScreen.swift in Sources */,
+				C2BB5CFD2936F13A00946B7F /* UIColorTransformer.swift in Sources */,
 				C2881E1E2934E02500D03A8B /* AddRoomViewModel.swift in Sources */,
 				C2881E182934C8E100D03A8B /* Room+CoreDataProperties.swift in Sources */,
 				C2881E1A2934C8F900D03A8B /* Room+CoreDataClass.swift in Sources */,
+				C2BB5CFF2936F4DC00946B7F /* RoomListViewModel.swift in Sources */,
 				C2881E1C2934DA7200D03A8B /* CoreDataManager.swift in Sources */,
 				8DCCEC0F25EAA8FE00F0B0F3 /* RoomsApp.swift in Sources */,
 			);

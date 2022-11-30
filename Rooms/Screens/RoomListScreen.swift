@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct RoomListScreen: View {
-    
+    @StateObject private var roomListVM = RoomListViewModel()
     @State private var isPresented: Bool = false
     
     var body: some View {
         NavigationView {
-            
-            List(0...20, id: \.self) { index in
+            List(roomListVM.roomViewModel, id: \.roomId) { room in
                 
                 HStack {
-                    Text("Room \(index)")
+                    Text(room.name)
+                    Spacer()
+                    HStack {
+                        
+                    }.frame(width: 50,height: 50).background(Color(room.color))
                 }
                 
             }.listStyle(PlainListStyle())
@@ -27,11 +30,11 @@ struct RoomListScreen: View {
                 isPresented = true
             })
             .onAppear(perform: {
-                
+                roomListVM.populateRoom()
             })
             
             .sheet(isPresented: $isPresented, onDismiss: {
-                
+                roomListVM.populateRoom()
             } ,content: {
                 AddRoomScreen()
             })
